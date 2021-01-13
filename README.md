@@ -2,6 +2,8 @@
 # 1.develop a program to display grayscale image using read and write operation
 In digital photography, computer-generated imagery, and colorimetry, a grayscale or image is one in which the value of each pixel is a single sample representing only an amount of light; that is, it carries only intensity information. Grayscale images, a kind of black-and-white or gray monochrome, are composed exclusively of shades of gray.
 To convert an image to grayscale in any of the Microsoft Office suite apps, right-click it and select Format Picture from the context menu . This will open an image editing panel on the right. Go to the Picture tab (the very last one). Expand the Picture Color options, and click the little dropdown next to the Presets for Color Saturation.
+
+
 import cv2 as c
 import numpy as np
 image = c.imread("rose.jpg")
@@ -93,7 +95,9 @@ c.destroyAllWindows()
 In digital image processing, the sum of absolute differences (SAD) is a measure of the similarity between image blocks. It is calculated by taking the absolute difference between each pixel in the original block and the corresponding pixel in the block being used for comparison
 
 To calculate the mean of all pixels in the image, without regard to what color channel they came from (if it's a color image), you do meanIntensity = mean
- import cv2
+
+
+import cv2
 import os
 path = 'C:\Pictures'
 imgs = []
@@ -144,6 +148,8 @@ cv2.destroyAllWindows()
 # 5.Develop a program to convert given color image to different color space.
 Color spaces are different types of color modes, used in image processing and signals and system for various purposes.
 The color spaces in image processing aim to facilitate the specifications of colors in some standard way. Different types of color spaces are used in multiple fields like in hardware, in multiple applications of creating animation, etc.
+
+
 import cv2
 image=cv2.imread('rose.jpg')
 cv2.imshow('pic',image)
@@ -179,6 +185,8 @@ cv2.destroyAllWindows()
 # 6.DEVELOP A PROGRAM TO CREATE AN ARRAY FROM 2D ARRAY
 For a two-dimensional array, in order to reference every element, we must use two nested loops. This gives us a counter variable for every column and every row in the matrix. int cols = 10; int rows = 10; int [] [] myArray = new int [cols] [rows]; // Two nested loops allow us to visit every spot in a 2D array
 Creating Arrays. You can create an array by using the new operator with the following syntax − Syntax arrayRefVar = new dataType[arraySize]; The above statement does two things − It creates an array using new dataType[arraySize]. It assigns the reference of the newly created array to the variable arrayRefVar.
+  
+  
   import numpy as np
 from PIL import Image
 import cv2
@@ -273,6 +281,8 @@ Output calculated Neigbhors of matrix
 
 # 8.Develop a program to calculate 8 Neighbors for a pixels in 2D array.
 
+After all, each pixel has 8 immediate neighbors: top left, top, top right, right, bottom right, bottom, bottom left, left. These image processing algorithms are often referred to as a "spatial convolution.". The process uses a weighted average of an input pixel and its neighbors to calculate an output pixel.
+
 import numpy as np
 axis = 5
 x =np.empty((axis,axis))
@@ -347,6 +357,9 @@ Output calculated 8 Neigbhors matrix
 1.875	3.375	4.0	4.625	2.875	
 
 # 9)To find the sum of neighbor matrix  
+  
+  Given a M x N matrix, find sum of all K x K sub-matrix 2. Given a M x N matrix and a cell (i, j), find sum of all elements of the matrix in constant time except the elements present at row i & column j of the matrix. Given a M x N matrix, calculate maximum sum submatrix of size k x k in a given M x N matrix in O (M*N) time. Here, 0 < k < M, N.
+  
   import numpy as np
     def sumNeighbors(M,x,y):
     l = []
