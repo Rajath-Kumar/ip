@@ -288,51 +288,66 @@ Output calculated Neigbhors of matrix
   
   Given a M x N matrix, find sum of all K x K sub-matrix 2. Given a M x N matrix and a cell (i, j), find sum of all elements of the matrix in constant time except the elements present at row i & column j of the matrix. Given a M x N matrix, calculate maximum sum submatrix of size k x k in a given M x N matrix in O (M*N) time. Here, 0 < k < M, N.
   
-  import numpy as np
-    def sumNeighbors(M,x,y):
-    l = []
-    for i in range(max(0,x-1),x+2): # max(0,x-1), such that no negative values in range()
-        for j in range(max(0,y-1),y+2):
-            try:
-                t = M[i][j]
-                l.append(t)
-            except IndexError: # if entry doesn't exist
-                pass
-    return sum(l)-M[x][y] # exclude the entry itself
+import numpy as np
+
+axis = 3
+x =np.empty((axis,axis))
+y = np.empty((axis+2,axis+2))
+r=np.empty((axis,axis))
+s =np.empty((axis,axis))
+x = np.array([[1,4,3],[2,8,5],[3,4,6]])
 
 
-M = [[1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]]
+print('Matrix\n')
 
-M = np.asarray(M)
-N = np.zeros(M.shape)
+for i in range(0,axis):
+    for j in range(0,axis):
+        print(int(x[i][j]),end = '\t')
+    print('\n')
 
-for i in range(M.shape[0]):
-    for j in range(M.shape[1]):
-        N[i][j] = sumNeighbors(M, i, j)
+print('Temp matrix\n')
 
-print("Original matrix:\n",M)
-print("Summed neighbors matrix:\n",N)
+for i in range(0,axis+2):
+    for j in range(0,axis+2):
+        if i == 0 or i == axis+1 or j == 0 or j==axis+1:
+            y[i][j]=0
+        else:
+            #print("i = {}, J = {}".format(i,j))
+            y[i][j]=x[i-1][j-1]
+           
+
+for i in range(0,axis+2):
+    for j in range(0,axis+2):
+        print(int(y[i][j]),end = '\t')
+    print('\n')
+   
+   
+print('Output calculated Neighbours of matrix\n')
 
 
-            Output
-
-Original matrix:
-
-
-[[1 2 3]
-
-[4 5 6]
  
- [7 8 9]]
+print('sum of Neighbours of matrix\n')
+for i in range(0,axis):
+    for j in range(0,axis):
+       
+       
+       
+   r[i][j]=((y[i][j]+y[i][j+1]+y[i][j+2]+y[i+1][j]+y[i+1][j+2]+y[i+2][j]+y[i+2][j+1]+y[i+2][j+2]))
+   print(r[i][j],end = '\t')
+       
+ print('\n')
 
+print('\n Average of Neighbours of matrix\n')
 
-Summed neighbors matrix:
+for i in range(0,axis):
+    for j in range(0,axis):
+       
+       
+   s[i][j]=((y[i][j]+y[i][j+1]+y[i][j+2]+y[i+1][j]+y[i+1][j+2]+y[i+2][j]+y[i+2][j+1]+y[i+2][j+2])/8)
+       
+   print(s[i][j],end = '\t')
+  print('\n')
 
-
-[[11. 19. 13.]
-
-[23. 40. 27.]
+ OUTPUT
  
- [17. 31. 19.]]
+ 
