@@ -86,3 +86,27 @@ c.destroyAllWindows()
 
 
 ![image](https://user-images.githubusercontent.com/72590669/104429161-4f1cfb00-55ab-11eb-9b71-6837db4e59ae.png)
+
+
+# 3.Create a program to find sum and mean of a set of image.
+
+ import cv2
+import os
+path = 'C:\Pictures'
+imgs = []
+
+files = os.listdir(path)
+for file in files:
+    filepath=path+"\\"+file
+    imgs.append(cv2.imread(filepath))
+i=0
+im = []
+for im in imgs:
+    #cv2.imshow(files[i],imgs[i])
+    im+=imgs[i]
+    i=i+1
+cv2.imshow("sum of four pictures",im)
+meanImg = im/len(files)
+cv2.imshow("mean of four pictures",meanImg)
+cv2.waitKey(0)
+
