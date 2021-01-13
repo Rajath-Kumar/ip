@@ -138,3 +138,24 @@ cv2.destroyAllWindows()
 ![image](https://user-images.githubusercontent.com/72590669/104432424-06ffd780-55af-11eb-9fd4-4f2c9300df73.png)
 ![image](https://user-images.githubusercontent.com/72590669/104432631-37477600-55af-11eb-9b7a-833e077b481e.png)
 ![image](https://user-images.githubusercontent.com/72590669/104432856-71187c80-55af-11eb-95de-4b2ed6c4e76d.png)
+
+
+# 5.Develop a program to convert given color image to different color space.
+Color spaces are different types of color modes, used in image processing and signals and system for various purposes.
+The color spaces in image processing aim to facilitate the specifications of colors in some standard way. Different types of color spaces are used in multiple fields like in hardware, in multiple applications of creating animation, etc.
+import cv2
+image=cv2.imread('rose.jpg')
+cv2.imshow('pic',image)
+cv2.waitKey(0)
+yuv_img = cv2.cvtColor(image,cv2.COLOR_RGB2YUV)
+cv2.imshow('ychannel',yuv_img[:,:,0])
+cv2.imshow('uchannel',yuv_img[:,:,1])
+cv2.imshow('vchannel',yuv_img[:,:,2])
+cv2.waitKey(0)
+hsv_img = cv2.cvtColor(image,cv2.COLOR_RGB2HSV)
+cv2.imshow('hchannel',hsv_img[:,:,0])
+cv2.imshow('schannel',hsv_img[:,:,1])
+cv2.imshow('vchannel',hsv_img[:,:,2])
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
