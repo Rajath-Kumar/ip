@@ -262,25 +262,7 @@ for i in range(0,axis):
 
    Output
 
-Temp matrix
 
-0	0	0	0	0	
-
-0	1	4	3	0	
-
-0	2	8	5	0	
-
-0	3	4	6	0	
-
-0	0	0	0	0	
-
-Output calculated Neigbhors of matrix
-
-1.75	2.375	2.125	
-
-2.5	3.5	3.125	
-
-1.75	3.0	2.125	
 
 
 
@@ -351,4 +333,4 @@ for i in range(0,axis):
  OUTPUT
  
  ![image](https://user-images.githubusercontent.com/72590669/104446506-92359900-55c0-11eb-9e43-39335b35a0ff.png)
-
+![image](https://user-images.githubusercontent.com/72590669/104446674-ce68f980-55c0-11eb-90b3-fdf6887b435c.png)
