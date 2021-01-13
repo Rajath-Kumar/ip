@@ -37,7 +37,7 @@ c.destroyAllWindows()
 
 
 
-
+# Scaling
 
 import cv2 as c
 import numpy as np
@@ -61,7 +61,7 @@ c.destroyAllWindows()
 
 
 
-
+# Rotation
 
 import cv2 as c
 
@@ -110,3 +110,4 @@ meanImg = im/len(files)
 cv2.imshow("mean of four pictures",meanImg)
 cv2.waitKey(0)
 
+![image](https://user-images.githubusercontent.com/72590669/104430238-6d372b00-55ac-11eb-9982-b29f0cb0b818.png)
