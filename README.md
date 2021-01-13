@@ -206,8 +206,10 @@ cv2.waitKey(0)
 ![image](https://user-images.githubusercontent.com/72590669/104436233-5d6f1500-55b3-11eb-8238-e17dec143dff.png)
 
 # 7.Find the neighborhood matrix.
+In topology and related areas of mathematics, a neighbourhood (or neighborhood) is one of the basic concepts in a topological space.It is closely related to the concepts of open set and interior.Intuitively speaking, a neighbourhood of a point is a set of points containing that point where one can move some amount in any direction away from that point without leaving the set.
 
 import numpy as np
+
 axis = 3
 x =np.empty((axis,axis))
 y = np.empty((axis+2,axis+2))
@@ -269,3 +271,117 @@ Output calculated Neigbhors of matrix
 
 1.75	3.0	2.125	
 
+# 8.Develop a program to calculate 8 Neighbors for a pixels in 2D array.
+
+import numpy as np
+axis = 5
+x =np.empty((axis,axis))
+y = np.empty((axis+2,axis+2))
+s =np.empty((axis,axis))
+for i in range(0,axis):
+    for j in range(0,axis):
+        x[i][j]=int(i+j+1)
+print('Generated matrix\n')      
+for i in range(0,axis):
+    for j in range(0,axis):
+        print(int(x[i][j]),end = '\t')
+    print('\n')
+print('Temp matrix\n')
+for i in range(0,axis+2):
+    for j in range(0,axis+2):
+        if i == 0 or i == 6 or j == 0 or j==6:
+            y[i][j]=0
+        else:
+            y[i][j]=x[i-1][j-1]
+for i in range(0,axis+2):
+    for j in range(0,axis+2):
+        print(int(y[i][j]),end = '\t')
+    print('\n')
+print('Output calculated 8 Neigbhors matrix\n')      
+for i in range(0,axis):
+    for j in range(0,axis):
+        s[i][j]=((y[i][j]+y[i][j+1]+y[i][j+2]+y[i+1][j]+y[i+1][j+2]+y[i+2][j]+y[i+2][j+1]+y[i+2][j+2])/8)
+        print(s[i][j],end = '\t')
+    print('\n')
+
+  Output
+
+Generated matrix
+
+1	2	3	4	5	
+
+2	3	4	5	6	
+
+3	4	5	6	7	
+
+4	5	6	7	8	
+
+5	6	7	8	9	
+
+Temp matrix
+
+0	0	0	0	0	0	0	
+
+0	1	2	3	4	5	0	
+
+0	2	3	4	5	6	0	
+
+0	3	4	5	6	7	0	
+
+0	4	5	6	7	8	0	
+
+0	5	6	7	8	9	0	
+
+0	0	0	0	0	0	0	
+
+Output calculated 8 Neigbhors matrix
+
+0.875	1.625	2.25	2.875	1.875	
+
+1.625	3.0	4.0	5.0	3.375	
+
+2.25	4.0	5.0	6.0	4.0	
+
+2.875	5.0	6.0	7.0	4.625	
+
+1.875	3.375	4.0	4.625	2.875	
+
+# 9)To find the sum of neighbor matrix  
+  import numpy as np
+    def sumNeighbors(M,x,y):
+    l = []
+    for i in range(max(0,x-1),x+2): # max(0,x-1), such that no negative values in range()
+        for j in range(max(0,y-1),y+2):
+            try:
+                t = M[i][j]
+                l.append(t)
+            except IndexError: # if entry doesn't exist
+                pass
+    return sum(l)-M[x][y] # exclude the entry itself
+
+
+M = [[1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]]
+
+M = np.asarray(M)
+N = np.zeros(M.shape)
+
+for i in range(M.shape[0]):
+    for j in range(M.shape[1]):
+        N[i][j] = sumNeighbors(M, i, j)
+
+print("Original matrix:\n",M)
+print("Summed neighbors matrix:\n",N)
+
+
+            Output
+
+Original matrix:
+ [[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+Summed neighbors matrix:
+ [[11. 19. 13.]
+ [23. 40. 27.]
+ [17. 31. 19.]]
