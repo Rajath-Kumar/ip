@@ -10,7 +10,7 @@ c.imshow("Fist Lab",gray)
 cv2.imwrite("rajath.jpg",grayimg)
 c.waitKey(0)
 c.destroyAllWindows()
-output
+# Output
 
 
 ![image](https://user-images.githubusercontent.com/72590669/104425684-f8adbd80-55a6-11eb-846c-90960482e44d.png)
@@ -32,7 +32,7 @@ res = c.resize(image,(width,hight))
 c.imshow("Fist Lab",res)
 c.waitKey(0)
 c.destroyAllWindows()
-
+# Output
 ![image](https://user-images.githubusercontent.com/72590669/104428118-14669300-55aa-11eb-98ca-867d28539de4.png)
 
 
@@ -112,7 +112,7 @@ cv2.imshow("sum of four pictures",im)
 meanImg = im/len(files)
 cv2.imshow("mean of four pictures",meanImg)
 cv2.waitKey(0)
-
+# Output
 ![image](https://user-images.githubusercontent.com/72590669/104430238-6d372b00-55ac-11eb-9982-b29f0cb0b818.png)
 ![image](https://user-images.githubusercontent.com/72590669/104430566-dae35700-55ac-11eb-9cb4-27644159716d.png)
 
@@ -135,6 +135,7 @@ cv2.imshow("Binary Image",bw_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
+# Output
 ![image](https://user-images.githubusercontent.com/72590669/104432424-06ffd780-55af-11eb-9fd4-4f2c9300df73.png)
 ![image](https://user-images.githubusercontent.com/72590669/104432631-37477600-55af-11eb-9b7a-833e077b481e.png)
 ![image](https://user-images.githubusercontent.com/72590669/104432856-71187c80-55af-11eb-95de-4b2ed6c4e76d.png)
@@ -159,7 +160,7 @@ cv2.imshow('vchannel',hsv_img[:,:,2])
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-
+# Output
 ![image](https://user-images.githubusercontent.com/72590669/104433843-8b068f00-55b0-11eb-92e5-726a4588ad5c.png)
 
 # YUV
@@ -173,4 +174,32 @@ cv2.destroyAllWindows()
 ![image](https://user-images.githubusercontent.com/72590669/104434872-c5bcf700-55b1-11eb-8d57-7895e9dc171d.png)
 ![image](https://user-images.githubusercontent.com/72590669/104435005-ea18d380-55b1-11eb-947e-1eb7ec5e8328.png)
 ![image](https://user-images.githubusercontent.com/72590669/104435217-20eee980-55b2-11eb-8d3d-5d9aba6c141c.png)
+
+
+# 6.DEVELOP A PROGRAM TO CREATE AN ARRAY FROM 2D ARRAY
+For a two-dimensional array, in order to reference every element, we must use two nested loops. This gives us a counter variable for every column and every row in the matrix. int cols = 10; int rows = 10; int [] [] myArray = new int [cols] [rows]; // Two nested loops allow us to visit every spot in a 2D array
+Creating Arrays. You can create an array by using the new operator with the following syntax − Syntax arrayRefVar = new dataType[arraySize]; The above statement does two things − It creates an array using new dataType[arraySize]. It assigns the reference of the newly created array to the variable arrayRefVar.
+  import numpy as np
+from PIL import Image
+import cv2
+
+array = np.linspace(0,1,256*256)
+
+
+mat = np.reshape(array,(256,256))
+
+img = Image.fromarray(np.uint8(mat * 255) , 'L')
+img.show()
+cv2.waitKey(0)
+array = np.linspace(0,1,256*256)
+
+
+mat = np.reshape(array,(256,256))
+
+
+img = Image.fromarray( mat , 'L')
+img.show()
+cv2.waitKey(0)
+
+
 
