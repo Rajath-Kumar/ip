@@ -205,9 +205,9 @@ cv2.waitKey(0)
 ![image](https://user-images.githubusercontent.com/72590669/104436024-1aad3d00-55b3-11eb-9ae8-abbe47102946.png)
 ![image](https://user-images.githubusercontent.com/72590669/104436233-5d6f1500-55b3-11eb-8238-e17dec143dff.png)
 
+# 7.Find the neighborhood matrix.
 
-# import numpy as np
-
+import numpy as np
 axis = 3
 x =np.empty((axis,axis))
 y = np.empty((axis+2,axis+2))
