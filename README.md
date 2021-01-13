@@ -201,5 +201,5 @@ img = Image.fromarray( mat , 'L')
 img.show()
 cv2.waitKey(0)
 
-
-
+# Output
+![image](https://user-images.githubusercontent.com/72590669/104436024-1aad3d00-55b3-11eb-9ae8-abbe47102946.png)
