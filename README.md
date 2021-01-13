@@ -159,3 +159,5 @@ cv2.imshow('vchannel',hsv_img[:,:,2])
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
+
+![image](https://user-images.githubusercontent.com/72590669/104433843-8b068f00-55b0-11eb-92e5-726a4588ad5c.png)
