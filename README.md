@@ -52,9 +52,9 @@ c.waitKey(0)
 c.destroyAllWindows()
 
 
+![image](https://user-images.githubusercontent.com/72590669/104428118-14669300-55aa-11eb-98ca-867d28539de4.png)
 
-
-
+# scaling 2
 ![image](https://user-images.githubusercontent.com/72590669/104428437-7d4e0b00-55aa-11eb-876c-2ff0d8bf51a7.png)
 
 
