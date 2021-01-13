@@ -204,3 +204,68 @@ cv2.waitKey(0)
 # Output
 ![image](https://user-images.githubusercontent.com/72590669/104436024-1aad3d00-55b3-11eb-9ae8-abbe47102946.png)
 ![image](https://user-images.githubusercontent.com/72590669/104436233-5d6f1500-55b3-11eb-8238-e17dec143dff.png)
+
+
+# import numpy as np
+
+axis = 3
+x =np.empty((axis,axis))
+y = np.empty((axis+2,axis+2))
+s =np.empty((axis,axis))
+x = np.array([[1,4,3],[2,8,5],[3,4,6]])
+
+
+'''
+for i in range(0,axis):
+    for j in range(0,axis):
+        print(int(x[i][j]),end = '\t')
+    print('\n')'''
+
+print('Temp matrix\n')
+
+for i in range(0,axis+2):
+    for j in range(0,axis+2):
+        if i == 0 or i == axis+1 or j == 0 or j==axis+1:
+            y[i][j]=0
+        else:
+            #print("i = {}, J = {}".format(i,j))
+            y[i][j]=x[i-1][j-1]
+           
+
+for i in range(0,axis+2):
+    for j in range(0,axis+2):
+        print(int(y[i][j]),end = '\t')
+    print('\n')
+   
+   
+print('Output calculated Neigbhors of matrix\n')      
+for i in range(0,axis):
+    for j in range(0,axis):
+        s[i][j]=((y[i][j]+y[i][j+1]+y[i][j+2]+y[i+1][j]+y[i+1][j+2]+y[i+2][j]+y[i+2][j+1]+y[i+2][j+2])/8)
+        print(s[i][j],end = '\t')
+    print('\n')
+
+
+
+   Output
+
+Temp matrix
+
+0	0	0	0	0	
+
+0	1	4	3	0	
+
+0	2	8	5	0	
+
+0	3	4	6	0	
+
+0	0	0	0	0	
+
+Output calculated Neigbhors of matrix
+
+1.75	2.375	2.125	
+
+2.5	3.5	3.125	
+
+1.75	3.0	2.125	
+
