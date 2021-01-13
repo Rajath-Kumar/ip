@@ -45,4 +45,25 @@ res = c.resize(image,(width,hight))
 c.imshow("Fist Lab",res)
 c.waitKey(0)
 c.destroyAllWindows()
+
 ![image](https://user-images.githubusercontent.com/72590669/104428437-7d4e0b00-55aa-11eb-876c-2ff0d8bf51a7.png)
+
+import cv2 as c
+
+import numpy as np
+
+image = c.imread("rose.jpg")
+
+gray = c.cvtColor(image,c.COLOR_BGR2RGB)
+
+h,w = image.shape[0:2]
+
+rotationMatrix = cv2.getRotationMatrix2D((w/2, h/2), 200, .5)
+
+rotated_image = cv2.warpAffine(image,rotationMatrix,(w,h))
+
+c.imshow("Fist Lab",rotated_image)
+
+c.waitKey(0)
+
+c.destroyAllWindows()
