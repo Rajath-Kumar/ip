@@ -34,4 +34,15 @@ c.waitKey(0)
 c.destroyAllWindows()
 
 ![image](https://user-images.githubusercontent.com/72590669/104428118-14669300-55aa-11eb-98ca-867d28539de4.png)
-
+import cv2 as c
+import numpy as np
+image = c.imread("rose.jpg")
+gray = c.cvtColor(image,c.COLOR_BGR2RGB)
+h,w = image.shape[0:2]
+width = int(w * 3)
+hight = int(h * 3)
+res = c.resize(image,(width,hight))
+c.imshow("Fist Lab",res)
+c.waitKey(0)
+c.destroyAllWindows()
+![image](https://user-images.githubusercontent.com/72590669/104428437-7d4e0b00-55aa-11eb-876c-2ff0d8bf51a7.png)
