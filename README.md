@@ -11,6 +11,8 @@ cv2.imwrite("rajath.jpg",grayimg)
 c.waitKey(0)
 c.destroyAllWindows()
 output
+
+
 ![image](https://user-images.githubusercontent.com/72590669/104425684-f8adbd80-55a6-11eb-846c-90960482e44d.png)
 
-# 2
+
