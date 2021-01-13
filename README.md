@@ -82,3 +82,7 @@ c.imshow("Fist Lab",rotated_image)
 c.waitKey(0)
 
 c.destroyAllWindows()
+
+
+
+![image](https://user-images.githubusercontent.com/72590669/104429161-4f1cfb00-55ab-11eb-9b71-6837db4e59ae.png)
