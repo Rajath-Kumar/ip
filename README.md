@@ -350,4 +350,5 @@ for i in range(0,axis):
 
  OUTPUT
  
- 
+ ![image](https://user-images.githubusercontent.com/72590669/104446506-92359900-55c0-11eb-9e43-39335b35a0ff.png)
+
