@@ -319,10 +319,16 @@ print("Summed neighbors matrix:\n",N)
             Output
 
 Original matrix:
- [[1 2 3]
+
+
+[[1 2 3]
  [4 5 6]
  [7 8 9]]
+
+
 Summed neighbors matrix:
- [[11. 19. 13.]
+
+
+[[11. 19. 13.]
  [23. 40. 27.]
  [17. 31. 19.]]
