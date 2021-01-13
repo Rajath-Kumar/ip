@@ -90,6 +90,9 @@ c.destroyAllWindows()
 
 # 3.Create a program to find sum and mean of a set of image.
 
+In digital image processing, the sum of absolute differences (SAD) is a measure of the similarity between image blocks. It is calculated by taking the absolute difference between each pixel in the original block and the corresponding pixel in the block being used for comparison
+
+To calculate the mean of all pixels in the image, without regard to what color channel they came from (if it's a color image), you do meanIntensity = mean
  import cv2
 import os
 path = 'C:\Pictures'
