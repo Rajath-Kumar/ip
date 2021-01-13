@@ -115,3 +115,23 @@ cv2.waitKey(0)
 
 ![image](https://user-images.githubusercontent.com/72590669/104430238-6d372b00-55ac-11eb-9982-b29f0cb0b818.png)
 ![image](https://user-images.githubusercontent.com/72590669/104430566-dae35700-55ac-11eb-9cb4-27644159716d.png)
+
+
+# 4.Develop a program to convert image to binary image and gray scale.
+
+Binary images are images whose pixels have only two possible intensity values. Numerically, the two values are often 0 for black, and either 1 or 255 for white. The main reason binary images are particularly useful in the field of Image Processing is because they allow easy separation of an object from the background.
+
+In digital photography, computer-generated imagery, and colorimetry, a grayscale or image is one in which the value of each pixel is a single sample representing only an amount of light; that is, it carries only intensity information. Grayscale images, a kind of black-and-white or gray monochrome, are composed exclusively of shades of gray.
+
+ import cv2
+img = cv2.imread('rose.jpg')
+cv2.imshow('Input',img)
+cv2.waitKey(0)
+grayimg=cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+cv2.imshow('Grayscaleimage',grayimg)
+cv2.waitKey(0)
+ret, bw_img = cv2.threshold(img,127,255, cv2.THRESH_BINARY)
+cv2.imshow("Binary Image",bw_img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
