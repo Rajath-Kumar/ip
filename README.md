@@ -262,7 +262,7 @@ for i in range(0,axis):
 
    Output
 
-
+![image](https://user-images.githubusercontent.com/72590669/104447005-34ee1780-55c1-11eb-9a62-7c72c960cc06.png)
 
 
 
