@@ -279,84 +279,9 @@ Output calculated Neigbhors of matrix
 
 1.75	3.0	2.125	
 
-# 8.Develop a program to calculate 8 Neighbors for a pixels in 2D array.
 
-After all, each pixel has 8 immediate neighbors: top left, top, top right, right, bottom right, bottom, bottom left, left. These image processing algorithms are often referred to as a "spatial convolution.". The process uses a weighted average of an input pixel and its neighbors to calculate an output pixel.
 
-import numpy as np
-axis = 5
-x =np.empty((axis,axis))
-y = np.empty((axis+2,axis+2))
-s =np.empty((axis,axis))
-for i in range(0,axis):
-    for j in range(0,axis):
-        x[i][j]=int(i+j+1)
-print('Generated matrix\n')      
-for i in range(0,axis):
-    for j in range(0,axis):
-        print(int(x[i][j]),end = '\t')
-    print('\n')
-print('Temp matrix\n')
-for i in range(0,axis+2):
-    for j in range(0,axis+2):
-        if i == 0 or i == 6 or j == 0 or j==6:
-            y[i][j]=0
-        else:
-            y[i][j]=x[i-1][j-1]
-for i in range(0,axis+2):
-    for j in range(0,axis+2):
-        print(int(y[i][j]),end = '\t')
-    print('\n')
-print('Output calculated 8 Neigbhors matrix\n')      
-for i in range(0,axis):
-    for j in range(0,axis):
-        s[i][j]=((y[i][j]+y[i][j+1]+y[i][j+2]+y[i+1][j]+y[i+1][j+2]+y[i+2][j]+y[i+2][j+1]+y[i+2][j+2])/8)
-        print(s[i][j],end = '\t')
-    print('\n')
-
-  Output
-
-Generated matrix
-
-1	2	3	4	5	
-
-2	3	4	5	6	
-
-3	4	5	6	7	
-
-4	5	6	7	8	
-
-5	6	7	8	9	
-
-Temp matrix
-
-0	0	0	0	0	0	0	
-
-0	1	2	3	4	5	0	
-
-0	2	3	4	5	6	0	
-
-0	3	4	5	6	7	0	
-
-0	4	5	6	7	8	0	
-
-0	5	6	7	8	9	0	
-
-0	0	0	0	0	0	0	
-
-Output calculated 8 Neigbhors matrix
-
-0.875	1.625	2.25	2.875	1.875	
-
-1.625	3.0	4.0	5.0	3.375	
-
-2.25	4.0	5.0	6.0	4.0	
-
-2.875	5.0	6.0	7.0	4.625	
-
-1.875	3.375	4.0	4.625	2.875	
-
-# 9)To find the sum of neighbor matrix  
+# 8)To find the sum of neighbor matrix  
   
   Given a M x N matrix, find sum of all K x K sub-matrix 2. Given a M x N matrix and a cell (i, j), find sum of all elements of the matrix in constant time except the elements present at row i & column j of the matrix. Given a M x N matrix, calculate maximum sum submatrix of size k x k in a given M x N matrix in O (M*N) time. Here, 0 < k < M, N.
   
