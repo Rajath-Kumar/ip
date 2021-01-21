@@ -388,5 +388,7 @@ cv.THRESH_TOZERO_INV
 
 ```
 # Output
+![image](https://user-images.githubusercontent.com/72590669/105329541-45bd0f80-5bf7-11eb-9ccb-5011ef20ce02.png)
 
+![image](https://user-images.githubusercontent.com/72590669/105329739-7dc45280-5bf7-11eb-9052-e9be5241dd3f.png)
 
