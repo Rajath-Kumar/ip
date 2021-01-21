@@ -349,3 +349,4 @@ cv2.waitKey(0)
 #OUTPUT
 
 ![image](https://user-images.githubusercontent.com/72590669/105326531-da257300-5bf3-11eb-829a-5e290d706d24.png)
+![image](https://user-images.githubusercontent.com/72590669/105326903-47d19f00-5bf4-11eb-82b2-9a482b3e59d1.png)
