@@ -365,6 +365,12 @@ Contrast refers to the amount of differentiation that is there between the vario
 Contrast Enhancement refers to the sharpening of image features to remove the noisy feature such as edges and contrast boundaries. Contrast Enhancement Algorithms aim to improve the perception of the image by human eye.
 
 ```
-
+from PIL import Image, ImageEnhance
+img = Image.open("rose.jpg")
+img.show()
+img=ImageEnhance.Color(img)
+img.enhance(2.0).show()
+```
 
 ![image](https://user-images.githubusercontent.com/72590669/105328710-58831480-5bf6-11eb-9a5b-377628f7ee42.png)
+![image](https://user-images.githubusercontent.com/72590669/105328887-88321c80-5bf6-11eb-97cc-2b2fa1cc8af3.png)
