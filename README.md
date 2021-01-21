@@ -391,3 +391,5 @@ cv.THRESH_TOZERO_INV
 
 ![image](https://user-images.githubusercontent.com/72590669/105329739-7dc45280-5bf7-11eb-9052-e9be5241dd3f.png)
 
+
+![image](https://user-images.githubusercontent.com/72590669/105330219-0f33c480-5bf8-11eb-8814-f73c266f9164.png)
