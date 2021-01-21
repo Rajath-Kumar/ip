@@ -4,7 +4,7 @@ In digital photography, computer-generated imagery, and colorimetry, a grayscale
 
 To convert an image to grayscale in any of the Microsoft Office suite apps, right-click it and select Format Picture from the context menu . This will open an image editing panel on the right. Go to the Picture tab (the very last one). Expand the Picture Color options, and click the little dropdown next to the Presets for Color Saturation.
 
-
+```
 import cv2 as c
 import numpy as np
 image = c.imread("rose.jpg")
@@ -13,6 +13,7 @@ c.imshow("Fist Lab",gray)
 cv2.imwrite("rajath.jpg",grayimg)
 c.waitKey(0)
 c.destroyAllWindows()
+```
 # Output
 
 
@@ -26,6 +27,7 @@ Image scaling is a computer graphics process that increases or decreases the siz
 
 Image rotation is a common image processing routine with applications in matching, alignment, and other image-based algorithms. The input to an image rotation routine is an image, the rotation angle θ, and a point about which rotation is done.
 
+```
 import cv2 as c
 import numpy as np
 image = c.imread("rose.jpg")
@@ -37,13 +39,14 @@ res = c.resize(image,(width,hight))
 c.imshow("Fist Lab",res)
 c.waitKey(0)
 c.destroyAllWindows()
+```
 # Output
 ![image](https://user-images.githubusercontent.com/72590669/104428118-14669300-55aa-11eb-98ca-867d28539de4.png)
 
 
 
 # Scaling
-
+```
 import cv2 as c
 import numpy as np
 image = c.imread("rose.jpg")
@@ -55,7 +58,7 @@ res = c.resize(image,(width,hight))
 c.imshow("Fist Lab",res)
 c.waitKey(0)
 c.destroyAllWindows()
-
+```
 # Scaling 1
 ![image](https://user-images.githubusercontent.com/72590669/104428118-14669300-55aa-11eb-98ca-867d28539de4.png)
 
@@ -67,7 +70,7 @@ c.destroyAllWindows()
 
 
 # Rotation
-
+```
 import cv2 as c
 
 import numpy as np
@@ -87,7 +90,7 @@ c.imshow("Fist Lab",rotated_image)
 c.waitKey(0)
 
 c.destroyAllWindows()
-
+```
 
 
 ![image](https://user-images.githubusercontent.com/72590669/104429161-4f1cfb00-55ab-11eb-9b71-6837db4e59ae.png)
@@ -99,7 +102,7 @@ In digital image processing, the sum of absolute differences (SAD) is a measure 
 
 Mean is most basic of all statistical measure. Means are often used in geometry and analysis; a wide range of means have been developed for these purposes. In contest of image processing filtering using mean is classified as spatial filtering and used for noise reduction.
 
-
+```
 import cv2
 import os
 path = 'C:\Pictures'
@@ -119,6 +122,7 @@ cv2.imshow("sum of four pictures",im)
 meanImg = im/len(files)
 cv2.imshow("mean of four pictures",meanImg)
 cv2.waitKey(0)
+```
 # Output
 ![image](https://user-images.githubusercontent.com/72590669/104430238-6d372b00-55ac-11eb-9982-b29f0cb0b818.png)
 ![image](https://user-images.githubusercontent.com/72590669/104430566-dae35700-55ac-11eb-9cb4-27644159716d.png)
@@ -129,7 +133,7 @@ cv2.waitKey(0)
 Binary images are images whose pixels have only two possible intensity values. Numerically, the two values are often 0 for black, and either 1 or 255 for white. The main reason binary images are particularly useful in the field of Image Processing is because they allow easy separation of an object from the background.
 
 In digital photography, computer-generated imagery, and colorimetry, a grayscale or image is one in which the value of each pixel is a single sample representing only an amount of light; that is, it carries only intensity information. Grayscale images, a kind of black-and-white or gray monochrome, are composed exclusively of shades of gray.
-
+```
  import cv2
 img = cv2.imread('rose.jpg')
 cv2.imshow('Input',img)
@@ -141,7 +145,7 @@ ret, bw_img = cv2.threshold(img,127,255, cv2.THRESH_BINARY)
 cv2.imshow("Binary Image",bw_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
+```
 # Output
 ![image](https://user-images.githubusercontent.com/72590669/104432424-06ffd780-55af-11eb-9fd4-4f2c9300df73.png)
 ![image](https://user-images.githubusercontent.com/72590669/104432631-37477600-55af-11eb-9b7a-833e077b481e.png)
@@ -152,7 +156,7 @@ cv2.destroyAllWindows()
 Color spaces are different types of color modes, used in image processing and signals and system for various purposes.
 The color spaces in image processing aim to facilitate the specifications of colors in some standard way. Different types of color spaces are used in multiple fields like in hardware, in multiple applications of creating animation, etc.
 
-
+```
 import cv2
 image=cv2.imread('rose.jpg')
 cv2.imshow('pic',image)
@@ -168,7 +172,7 @@ cv2.imshow('schannel',hsv_img[:,:,1])
 cv2.imshow('vchannel',hsv_img[:,:,2])
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
+```
 # Output
 ![image](https://user-images.githubusercontent.com/72590669/104433843-8b068f00-55b0-11eb-92e5-726a4588ad5c.png)
 
@@ -189,7 +193,7 @@ cv2.destroyAllWindows()
 For a two-dimensional array, in order to reference every element, we must use two nested loops. This gives us a counter variable for every column and every row in the matrix. int cols = 10; int rows = 10; int [] [] myArray = new int [cols] [rows]; // Two nested loops allow us to visit every spot in a 2D array
 Creating Arrays. You can create an array by using the new operator with the following syntax − Syntax arrayRefVar = new dataType[arraySize]; The above statement does two things − It creates an array using new dataType[arraySize]. It assigns the reference of the newly created array to the variable arrayRefVar.
   
-  
+```  
   import numpy as np
 from PIL import Image
 import cv2
@@ -211,7 +215,7 @@ mat = np.reshape(array,(256,256))
 img = Image.fromarray( mat , 'L')
 img.show()
 cv2.waitKey(0)
-
+```
 # Output
 ![image](https://user-images.githubusercontent.com/72590669/104436024-1aad3d00-55b3-11eb-9ae8-abbe47102946.png)
 ![image](https://user-images.githubusercontent.com/72590669/104436233-5d6f1500-55b3-11eb-8238-e17dec143dff.png)
@@ -220,7 +224,7 @@ cv2.waitKey(0)
 In topology and related areas of mathematics, a neighbourhood (or neighborhood) is one of the basic concepts in a topological space.It is closely related to the concepts of open set and interior.Intuitively speaking, a neighbourhood of a point is a set of points containing that point where one can move some amount in any direction away from that point without leaving the set.
 
 import numpy as np
-
+```
 axis = 3
 x =np.empty((axis,axis))
 y = np.empty((axis+2,axis+2))
@@ -257,7 +261,7 @@ for i in range(0,axis):
         s[i][j]=((y[i][j]+y[i][j+1]+y[i][j+2]+y[i+1][j]+y[i+1][j+2]+y[i+2][j]+y[i+2][j+1]+y[i+2][j+2])/8)
         print(s[i][j],end = '\t')
     print('\n')
-
+```
 
 
    Output
@@ -269,7 +273,7 @@ for i in range(0,axis):
 # 8)To find the sum of neighbor matrix  
   
   Given a M x N matrix, find sum of all K x K sub-matrix 2. Given a M x N matrix and a cell (i, j), find sum of all elements of the matrix in constant time except the elements present at row i & column j of the matrix. Given a M x N matrix, calculate maximum sum submatrix of size k x k in a given M x N matrix in O (M*N) time. Here, 0 < k < M, N.
-  
+  ```
 import numpy as np
 
 axis = 3
@@ -329,14 +333,14 @@ for i in range(0,axis):
        
    print(s[i][j],end = '\t')
   print('\n')
-
+```
  OUTPUT
  
  ![image](https://user-images.githubusercontent.com/72590669/104446506-92359900-55c0-11eb-9e43-39335b35a0ff.png)
 ![image](https://user-images.githubusercontent.com/72590669/104446674-ce68f980-55c0-11eb-90b3-fdf6887b435c.png)
 
 #9) Wwrite a program to implement negative transformation
-
+```
 import cv2
 import numpy as np
 img=cv2.imread('rose.jpg')
@@ -345,7 +349,7 @@ cv2.waitKey(0)
 img_neg=255-img
 cv2.imshow('negative',img_neg)
 cv2.waitKey(0)
-
+```
 #OUTPUT
 
 ![image](https://user-images.githubusercontent.com/72590669/105326531-da257300-5bf3-11eb-829a-5e290d706d24.png)
