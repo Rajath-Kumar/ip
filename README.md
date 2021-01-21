@@ -357,3 +357,13 @@ cv2.waitKey(0)
 
 ![image](https://user-images.githubusercontent.com/72590669/105326531-da257300-5bf3-11eb-829a-5e290d706d24.png)
 ![image](https://user-images.githubusercontent.com/72590669/105326903-47d19f00-5bf4-11eb-82b2-9a482b3e59d1.png)
+
+#10) develop a program to implement contrast enhancement and brightness tresholding
+
+#- contrast enhancement
+Contrast refers to the amount of differentiation that is there between the various image features. Images having a higher contrast level generally display a greater degree of color or gray-scale variation than those of lower contrast.
+Contrast Enhancement refers to the sharpening of image features to remove the noisy feature such as edges and contrast boundaries. Contrast Enhancement Algorithms aim to improve the perception of the image by human eye.
+
+```
+
+
