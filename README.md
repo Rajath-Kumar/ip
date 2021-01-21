@@ -374,3 +374,17 @@ img.enhance(2.0).show()
 
 ![image](https://user-images.githubusercontent.com/72590669/105328710-58831480-5bf6-11eb-9a5b-377628f7ee42.png)
 ![image](https://user-images.githubusercontent.com/72590669/105328887-88321c80-5bf6-11eb-97cc-2b2fa1cc8af3.png)
+
+
+#- brightness tresholding
+
+Here, the matter is straight-forward. For every pixel, the same threshold value is applied. If the pixel value is smaller than the threshold, it is set to 0, otherwise it is set to a maximum value. The function cv.threshold is used to apply the thresholding. The first argument is the source image, which should be a grayscale image. The second argument is the threshold value which is used to classify the pixel values. The third argument is the maximum value which is assigned to pixel values exceeding the threshold. OpenCV provides different types of thresholding which is given by the fourth parameter of the function. Basic thresholding as described above is done by using the type cv.THRESH_BINARY. All simple thresholding types are:
+
+cv.THRESH_BINARY
+cv.THRESH_BINARY_INV
+cv.THRESH_TRUNC
+cv.THRESH_TOZERO
+cv.THRESH_TOZERO_INV
+
+```
+
