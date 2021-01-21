@@ -386,6 +386,34 @@ cv.THRESH_TRUNC
 cv.THRESH_TOZERO
 cv.THRESH_TOZERO_INV
 
+```
+import cv2  
+import numpy as np  
+ 
+
+image1 = cv2.imread('rose.jpg')  
+ 
+img = cv2.cvtColor(image1, cv2.COLOR_BGR2GRAY)
+ 
+
+ret, thresh1 = cv2.threshold(img, 120, 255, cv2.THRESH_BINARY)
+ret, thresh2 = cv2.threshold(img, 120, 255, cv2.THRESH_BINARY_INV)
+ret, thresh3 = cv2.threshold(img, 120, 255, cv2.THRESH_TRUNC)
+ret, thresh4 = cv2.threshold(img, 120, 255, cv2.THRESH_TOZERO)
+ret, thresh5 = cv2.threshold(img, 120, 255, cv2.THRESH_TOZERO_INV)
+ 
+
+cv2.imshow('Binary Threshold', thresh1)
+cv2.imshow('Binary Threshold Inverted', thresh2)
+cv2.imshow('Truncated Threshold', thresh3)
+cv2.imshow('Set to 0', thresh4)
+cv2.imshow('Set to 0 Inverted', thresh5)
+ 
+if cv2.waitKey(0) & 0xff == 27:  
+    cv2.destroyAllWindows()  
+```    
+    
+    
 # Output
 ![image](https://user-images.githubusercontent.com/72590669/105329541-45bd0f80-5bf7-11eb-9ccb-5011ef20ce02.png)
 
