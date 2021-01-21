@@ -335,5 +335,17 @@ for i in range(0,axis):
  ![image](https://user-images.githubusercontent.com/72590669/104446506-92359900-55c0-11eb-9e43-39335b35a0ff.png)
 ![image](https://user-images.githubusercontent.com/72590669/104446674-ce68f980-55c0-11eb-90b3-fdf6887b435c.png)
 
+#9) Wwrite a program to implement negative transformation
+
+import cv2
+import numpy as np
+img=cv2.imread('rose.jpg')
+cv2.imshow('original',img)
+cv2.waitKey(0)
+img_neg=255-img
+cv2.imshow('negative',img_neg)
+cv2.waitKey(0)
+
+#OUTPUT
 
 ![image](https://user-images.githubusercontent.com/72590669/105326531-da257300-5bf3-11eb-829a-5e290d706d24.png)
