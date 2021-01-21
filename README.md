@@ -426,3 +426,26 @@ if cv2.waitKey(0) & 0xff == 27:
 
 ![image](https://user-images.githubusercontent.com/72590669/105330633-88cbb280-5bf8-11eb-9794-b1b42b6a9cac.png)
 
+
+# 11)develop a program toimplement power law (gamma) transformation
+
+A variety of devices for image capture, printing, and display respond according to a power law. The exponent in power law equation is referred to as gamma Þ process used to correct this power law response phenomena is called gamma correction. ... With =2.5, the CRT would produce images darker than intended.
+eg. i/p is a simple gray scale linear wedge .To reproduce colors accurately also requires knowledge of gamma correction as changing the value of gamma changes not only the brightness but also the color ratios of R:G:B.
+
+```
+import numpy as np
+import cv2
+
+img = cv2.imread('rose.jpg')
+
+gamma_two_point_two = np.array(230*(img/255)**2.1,dtype='uint8')
+# Similarly, Apply Gamma=0.4
+gamma_point_four = np.array(255*(img/255)**0.1,dtype='uint8')
+# Display the images in subplots
+img3 = cv2.hconcat([gamma_two_point_two,gamma_point_four])
+cv2.imshow('a2',img3)
+cv2.waitKey(0)
+```
+
+#OUTPUT
+
