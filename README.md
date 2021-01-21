@@ -340,6 +340,9 @@ for i in range(0,axis):
 ![image](https://user-images.githubusercontent.com/72590669/104446674-ce68f980-55c0-11eb-90b3-fdf6887b435c.png)
 
 #9) Wwrite a program to implement negative transformation
+
+When an image is inverted, each of its pixel value 'r' is subtracted from the maximum pixel value L-1 and the original pixel is replaced with the result 's'. Image inversion or Image negation helps finding the details from the darker regions of the image.
+Image is also known as a set of pixels. When we store an image in computers or digitally, it’s corresponding pixel values are stored. So, when we read an image to a variable using OpenCV in Python, the variable stores the pixel values of the image. When we try to negatively transform an image, the brightest areas are transformed into the darkest and the darkest areas are transformed into the brightest.
 ```
 import cv2
 import numpy as np
