@@ -517,3 +517,14 @@ cv2.destroyAllWindows()
 ![image](https://user-images.githubusercontent.com/72590669/107620856-62d78200-6c7b-11eb-8fba-4354bf392248.png)
 
 ![image](https://user-images.githubusercontent.com/72590669/107621166-d8dbe900-6c7b-11eb-9ebe-bc595236e45c.png)
+
+13) program for gray level slicing with and without background.
+
+two different approaches are adopted for gray level slicing are
+> gray level slicing with background
+>grayb level slicing without background
+
+gray level slicing with background it displays high level values in specific region of an image andgray level to other region by peserving background
+gray level slicing without background
+
+  
