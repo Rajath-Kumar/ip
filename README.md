@@ -514,3 +514,4 @@ cv2.destroyAllWindows()
 
 ![image](https://user-images.githubusercontent.com/72590669/107620761-391e5b00-6c7b-11eb-8d17-58589be51db4.png)
 
+![image](https://user-images.githubusercontent.com/72590669/107620856-62d78200-6c7b-11eb-8fba-4354bf392248.png)
