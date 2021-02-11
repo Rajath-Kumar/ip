@@ -486,3 +486,25 @@ if cv2.waitKey(0) & 0xff == 27:
   cv2.destroyAllWindows() 
 ```
 ![image](https://user-images.githubusercontent.com/72590669/107619876-d5476280-6c79-11eb-9800-ee5309d9bef5.png)
+
+# Logical Operators
+```
+ import cv2
+img1 = cv2.imread("mypet1.jpg")
+img2 = cv2.imread("mypet2.jpg")
+bitwise_and = cv2.bitwise_and(img2, img1)
+cv2.imshow("bit_and", bitwise_and)
+bitwise_or = cv2.bitwise_or(img2, img1)
+cv2.imshow("bitwise_or", bitwise_or)
+bitwise_xor = cv2.bitwise_xor(img2, img1)
+cv2.imshow("bitwise_xor", bitwise_xor)
+bitwise_not = cv2.bitwise_not(img1)
+cv2.imshow("bitwise_not1", bitwise_not)
+bitwise_not = cv2.bitwise_not(img2)
+cv2.imshow("bitwise_not2", bitwise_not)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+
+# Output
+
