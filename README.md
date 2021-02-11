@@ -644,5 +644,8 @@ plt.show()
  
  # open image
  
+ ![image](https://user-images.githubusercontent.com/72590669/107624637-2f97f180-6c81-11eb-8352-8b35a70743b2.png)
+ 
+ # close Image
  
  
