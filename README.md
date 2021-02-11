@@ -642,4 +642,7 @@ plt.show()
  
  ![image](https://user-images.githubusercontent.com/72590669/107624402-d0d27800-6c80-11eb-8e50-577e2c665457.png)
  
+ # open image
+ 
+ 
  
