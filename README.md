@@ -339,7 +339,7 @@ for i in range(0,axis):
  ![image](https://user-images.githubusercontent.com/72590669/104446506-92359900-55c0-11eb-9e43-39335b35a0ff.png)
 ![image](https://user-images.githubusercontent.com/72590669/104446674-ce68f980-55c0-11eb-90b3-fdf6887b435c.png)
 
-#9) Wwrite a program to implement negative transformation
+# 9) Wwrite a program to implement negative transformation
 
 When an image is inverted, each of its pixel value 'r' is subtracted from the maximum pixel value L-1 and the original pixel is replaced with the result 's'. Image inversion or Image negation helps finding the details from the darker regions of the image.
 Image is also known as a set of pixels. When we store an image in computers or digitally, it’s corresponding pixel values are stored. So, when we read an image to a variable using OpenCV in Python, the variable stores the pixel values of the image. When we try to negatively transform an image, the brightest areas are transformed into the darkest and the darkest areas are transformed into the brightest.
@@ -456,9 +456,9 @@ cv2.waitKey(0)
   Arithmetic Operations like Addition, Subtraction, and Bitwise Operations(AND, OR, NOT, XOR) can be applied to the input images. These operations can be helpful in enhancing the properties of the input images. The Image arithmetics are important for analyzing the input image properties. The operated images can be further used as an enhanced input image, and many more operations can be applied for clarifying, thresholding, dilating etc of the image  
  image arithmetic applies one of the standard arithmetic operations or a logical operator to two or more images. The operators are applied in a pixel-by-pixel way, i.e. the value of a pixel in the output image depends only on the values of the corresponding pixels in the input images. Hence, the images must be of the same size. Although image arithmetic is the most simple form of image processing, there is a wide range of applications. A main advantage of arithmetic operators is that the process is very simple and therefore fast.Logical operators are often used to combine two (mostly binary) images. In the case of integer images, the logical operator is normally applied in a bitwise way.
 
-  ```
- # addition of 2 image
 
+ # addition of 2 image
+```
       import cv2  
 import numpy as np  
 image1 = cv2.imread('mypet1.jpg')  
