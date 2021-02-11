@@ -573,7 +573,7 @@ plt.imshow(equ,'gray')
 plt.show()
 ```
 
-#Output
+# Output
 
 
 ![image](https://user-images.githubusercontent.com/72590669/107623210-00808080-6c7f-11eb-9d75-74a17b3c4eb6.png)
@@ -607,3 +607,37 @@ show()
 # Output
 
 ![image](https://user-images.githubusercontent.com/72590669/107623653-ad5afd80-6c7f-11eb-9d92-6ef87ad8fb9c.png)
+
+# 15) to perform following operation of a image opening and closing
+
+Opening is similar to erosion as it tends to remove the bright foreground pixels from the edges of regions of foreground pixels. The impact of the operator is to safeguard foreground region that has similarity with the structuring component, or that can totally contain the structuring component while taking out every single other area of foreground pixels. Opening operation is used for removing internal noise in an image.
+
+In mathematical morphology, the closing of a set (binary image) A by a structuring element B is the erosion of the dilation of that set, where and. denote the dilation and erosion, respectively. In image processing, closing is, together with opening, the basic workhorse of morphological noise removal.
+
+```
+import cv2
+import numpy as np
+import pandas as pd
+from matplotlib import pyplot as plt
+img=cv2.imread('lionel.jpg')
+plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+plt.show()
+img2=cv2.imread('lionel.jpg')
+
+kernel=np.ones((4,4),np.uint8)
+
+OPEN=cv2.morphologyEx(img2, cv2.MORPH_OPEN,kernel)
+plt.show()
+plt.title('OPEN image')
+plt.imshow(cv2.cvtColor(OPEN, cv2.COLOR_BGR2RGB))
+plt.show()
+
+close=cv2.morphologyEx(img2, cv2.MORPH_CLOSE,kernel)
+plt.show()
+plt.title('close image')
+plt.imshow(cv2.cvtColor(close, cv2.COLOR_BGR2RGB))
+plt.show()
+```
+ # Output
+ 
+ 
