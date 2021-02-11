@@ -450,3 +450,22 @@ cv2.waitKey(0)
 #OUTPUT
 
 ![image](https://user-images.githubusercontent.com/72590669/105332040-2e335600-5bfa-11eb-9fc0-593600fc38e5.png)
+
+
+# 12) program to enhanhce image using image artghmetic and logic operations.
+      
+      Arithmetic Operations like Addition, Subtraction, and Bitwise Operations(AND, OR, NOT, XOR) can be applied to the input images. These operations can be helpful in enhancing the properties of the input images. The Image arithmetics are important for analyzing the input image properties. The operated images can be further used as an enhanced input image, and many more operations can be applied for clarifying, thresholding, dilating etc of the image.
+ mage arithmetic applies one of the standard arithmetic operations or a logical operator to two or more images. The operators are applied in a pixel-by-pixel way, i.e. the value of a pixel in the output image depends only on the values of the corresponding pixels in the input images. Hence, the images must be of the same size. Although image arithmetic is the most simple form of image processing, there is a wide range of applications. A main advantage of arithmetic operators is that the process is very simple and therefore fast.Logical operators are often used to combine two (mostly binary) images. In the case of integer images, the logical operator is normally applied in a bitwise way.
+
+  ```
+ # addition of 2 image
+
+      import cv2  
+import numpy as np  
+image1 = cv2.imread('mypet1.jpg')  
+image2 = cv2.imread('mypet2.jpg')
+weightedSum = cv2.addWeighted(image1, 0.5, image2, 0.4, 0)
+cv2.imshow('Weighted Image', weightedSum)
+if cv2.waitKey(0) & 0xff == 25:  
+    cv2.destroyAllWindows()  
+```
