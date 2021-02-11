@@ -525,6 +525,31 @@ two different approaches are adopted for gray level slicing are
 >grayb level slicing without background
 
 gray level slicing with background it displays high level values in specific region of an image andgray level to other region by peserving background
-gray level slicing without background
+gray level slicing without background  it displays high level values in specific region of an image andgray level to other region by ignoring background
+
+# gray level slicing with background 
+```
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+image=cv2.imread('app.jpg',0)
+x,y=image.shape
+z=np.zeros((x,y))
+for i in range(0,x):
+    for j in range(0,y):
+        if(image[i][j]>50 and image[i][j]<150):
+            z[i][j]=255
+        else:
+            z[i][j]=image[i][j]
+equ=np.hstack((image,z))
+plt.title('Original ||   Graylevel slicing with background')
+plt.imshow(equ,'gray')
+plt.show()
+```
+
+# Output
+ 
+
+
 
   
