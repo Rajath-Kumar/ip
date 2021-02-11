@@ -485,4 +485,4 @@ cv2.imshow('Subtracted Image', sub)
 if cv2.waitKey(0) & 0xff == 27:  
   cv2.destroyAllWindows() 
 ```
-
+![image](https://user-images.githubusercontent.com/72590669/107619876-d5476280-6c79-11eb-9800-ee5309d9bef5.png)
